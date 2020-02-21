@@ -1,0 +1,48 @@
+{
+  "name": "BackendNode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./dist/bundle.js ",
+    "start:dev": "concurrently --kill-others \" npm start \" \"npm run build:dev\"",
+    "build:dev": "npx webpack --config webpack.config.js --watch --mode development",
+    "build:prod": "npx webpack --config webpack.config.js --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/nodesystems/nsn-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/nodesystems/nsn-backend/issues"
+  },
+  "homepage": "https://gitlab.com/nodesystems/nsn-backend#readme",
+  "dependencies": {
+    "app-root-path": "^3.0.0",
+    "bcrypt": "^3.0.7",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-jwt": "^5.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.8.9",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/register": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "concurrently": "^5.0.2",
+    "nodemon": "^2.0.2",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "babel-polyfill": "^6.0.16",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
